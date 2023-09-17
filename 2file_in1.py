@@ -19,14 +19,20 @@ with open(failname2, encoding = 'utf-8') as file:
 #запись данных в общтй файл	
 if counting_rows2 < counting_rows1:
 	with open('union.txt','w', encoding = 'utf-8') as file:
-		#file.writelines(second_lines)
-		#file.writelines(first_lines)
 		for element in second_lines:
 			file.write(element)
 			file.write('\n')
 		for element in first_lines:
 			file.write(element)
 			file.write('\n')
+else:
+	with open('union.txt','w', encoding = 'utf-8') as file:
+		for element in first_lines:
+			file.write(element)
+			file.write('\n')
+		for element in second_lines:
+			file.write(element)
+			file.write('\n')	
    
 #проверка файла         
 with open('union.txt', "r", encoding = 'utf-8') as file: 

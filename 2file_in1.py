@@ -1,6 +1,6 @@
 #чтение 1 го файла и получение данных для записи в общий файл
 failname1 = 'first.txt'
-with open(failname1, encoding = 'utf-8') as file:
+with open(failname1, encoding='utf-8') as file:
 	first_lines = file.readlines()
 	counting_rows1 = len(first_lines)
 	first_lines.append(str(counting_rows1))
@@ -16,7 +16,7 @@ with open(failname2, encoding = 'utf-8') as file:
 	second_lines.append(failname2)
 	second_lines.reverse()
 
-#запись данных в общтй файл	
+#запись данных в общий файл
 if counting_rows2 < counting_rows1:
 	with open('union.txt','w', encoding = 'utf-8') as file:
 		for element in second_lines:
